@@ -1,0 +1,45 @@
+html, body, body * {
+    margin:0px;
+    padding: 0px;
+    font-family: 'Open Sans';
+    
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main {
+    min-width: 500px;
+    background: lightcoral;
+    margin: 0 auto;
+    padding: 20px;
+    
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0px;
+        cursor: pointer;
+    }
+
+    p {
+        display: inline;
+    }
+
+    .total {
+        border-top: 1px solid white;
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+    
+
+}
+
+

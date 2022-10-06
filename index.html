@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordering Form</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- The main CSS file -->
+    <link href="app.css" rel="stylesheet" />
+
+    <!-- Include AngularJS from Google's CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body ng-app="OrderForm">
+
+		
+    <div id="main" ng-controller="MainController">
+      
+        <ul>
+            <li ng-repeat="item in items" ng-click="target($event)">{{ item.name }}<p>{{ item.price | currency}}</p></li>
+        </ul>
+
+        <div class="total">
+            <p class="total">Total:</p>
+            <p class="price"></p>
+        </div>
+  
+    </div>
+
+</body>
+</html>
