@@ -20,16 +20,17 @@
 </head>
 <body ng-app="OrderForm">
 
-		
+    <h1>Order Form</h1>
     <div id="main" ng-controller="MainController">
+        
       
         <ul>
-            <li ng-repeat="item in items" ng-click="target($event)">{{ item.name }}<p>{{ item.price | currency}}</p></li>
+            <li ng-repeat="item in items" ng-click="toggleClass(item)" ng-class="{'active':item.active}">{{ item.name }}<p>{{ item.price | currency}}</p></li>
         </ul>
 
         <div class="total">
-            <p class="total">Total:</p>
-            <p class="price"></p>
+            <p class="total-text">Total:</p>
+            <p class="price">{{totalPrice() | currency}}</p>
         </div>
   
     </div>

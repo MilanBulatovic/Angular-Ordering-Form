@@ -27,8 +27,23 @@ app.controller('MainController', [ '$scope', function($scope) {
 		}
 	];
 
-    $scope.target = function(e){
-        console.log(e.currentTarget);
+    //Toggle active class on item
+    $scope.toggleClass = function(item){
+        item.active = !item.active;
+    };
+
+    //Get total price if item is active
+    $scope.totalPrice = function() {
+        var total = 0;
+
+        $scope.items.forEach(item => {
+            if(item.active) {
+                total += item.price;
+            }
+        });
+        
+
+        return total;
     }
 
 }]);
