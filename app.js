@@ -34,10 +34,12 @@ app.controller('MainController', [ '$scope', function($scope) {
 
     //Get total price if item is active
     $scope.totalPrice = function() {
+        //Declare total as 0 and later we will add to this
         var total = 0;
 
         $scope.items.forEach(item => {
             if(item.active) {
+                //adding "active" item prices
                 total += item.price;
             }
         });
